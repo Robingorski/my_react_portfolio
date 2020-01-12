@@ -17,11 +17,18 @@ const Hamburger = ({ state }) => {
   useEffect(() => {
     if (state.clicked === false) {
       // close our menu
-
+      gsap.to([revealMenu, revealMenuBackground], {
+        duration: 0.8,
+        height: 0,
+        ease: "power3.inOut",
+        stagger: {
+          amount: 0.07
+        }
+      });
     } else if (state.clicked === true || (state.clicked === true && state.initial === null)
     ) {
       // open our menu
-
+      menu.style.display = "block";
     }
   });
 
