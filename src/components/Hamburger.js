@@ -25,6 +25,10 @@ const Hamburger = ({ state }) => {
           amount: 0.07
         }
       });
+      gsap.to(menu, {
+        duration: 1,
+        css: { display: "none" }
+      });
     } else if (state.clicked === true || (state.clicked === true && state.initial === null)
     ) {
       // open our menu
