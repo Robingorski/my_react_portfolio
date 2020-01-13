@@ -89,8 +89,8 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line2 = el)}
-                      to='/solutions'>
-                      Solutions
+                      to='/about-me'>
+                      About me
                     </Link>
                   </li>
                   <li>
@@ -98,16 +98,16 @@ const Hamburger = ({ state }) => {
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line3 = el)}
-                      to='/contact-us'>
+                      to='/contact-me'>
                       Contact me
                     </Link>
                   </li>
                 </ul>
               </nav>
             </div>
-            <div className='locations'>
-              Locations:
-                {/* Returning the list of cities */}
+            <div className='projects'>
+              Projects:
+                {/* Returning the list of projects */}
               {cities.map(el => (
                 <span
                   key={el.name}

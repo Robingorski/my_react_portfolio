@@ -61,7 +61,7 @@ const Header = ({ history }) => {
           <div className="inner-header">
             <div className="logo">
               <Link to="/">
-                <img className="pineapple" src={logo} alt="HEJ" width={50} />
+                <img className="pineapple" src={logo} alt="Pineapple-logo" />
               </Link>
             </div>
             <div className="menu">

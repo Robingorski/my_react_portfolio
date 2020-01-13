@@ -14,8 +14,8 @@ function App() {
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/opportunities' component={Opportunities} />
-                <Route exact path='/solutions' component={Solutions} />
-                <Route exact path='/contact-us' component={Contact} />
+                <Route exact path='/about-me' component={about} />
+                <Route exact path='/contact-me' component={Contact} />
               </Switch>
             </div>
           </div>
@@ -29,7 +29,7 @@ function Opportunities() {
   return <p>Discover our numerous opportunities</p>;
 }
 
-function Solutions() {
+function about() {
   return <p>Solutions that help you.</p>;
 }
 
@@ -42,9 +42,7 @@ function Home() {
     <div className='container'>
       <div className='wrapper'>
         <h5>
-          The <b>HAMBRG</b>, is a creative, engineer driven, global agency
-          working on advancing the software, advertising and design communities
-          to new heights.
+        "Welcome to my portfolio"
         </h5>
       </div>
     </div>

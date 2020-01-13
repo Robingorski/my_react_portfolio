@@ -56,7 +56,9 @@ body {
                 color: #1d1d1d;
                 height: 80vh;
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
                 /* padding-right: 360px; */
             }
         }
@@ -160,8 +162,9 @@ header {
                         display: block;
 
                         ul {
-                            margin: 0;
-                            padding: 0;
+                            margin-top: 10%;
+                            /*       margin: 0;
+                            padding: 0; */
 
                             li {
                                 list-style: none;
@@ -202,12 +205,12 @@ header {
                     }
                 }
 
-                .locations {
+                .projects {
                     position: absolute;
                     /*   bottom: -200; */
                     color: #fff;
-                    margin-top: 10%;
-                    font-size: 0.8rem;
+                    margin-top: 0%;
+                    font-size: 1rem;
                     font-weight: 600;
 
                     span {
