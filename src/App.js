@@ -34,7 +34,7 @@ function Solutions() {
 }
 
 function Contact() {
-  return <p>Feel free to reach us.</p>;
+  return <p>Feel free to reach me.</p>;
 }
 
 function Home() {

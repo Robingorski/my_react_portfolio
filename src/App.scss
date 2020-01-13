@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,800&display=swap");
 
-$red: #e20001;
-$black: #191919;
+$main-menu-background-color: #6ff789;
+$secondary-menu-background-color: #000000;
+
 
 * {
     margin: 0;
@@ -13,63 +14,74 @@ html {
     font-family: "Poppins";
     font-size: 62.5%;
     scroll-behavior: smooth;
-    max-width: 100%;
+    /*  max-width: 100vh; */
+    max-height: 100vh;
+    /*   background-color: $main-menu-background-color; */
     /*  overflow-x: hidden; */
 }
 
 body {
     /*  overflow-x: hidden; */
+    /*  max-width: 100vh; */
+    max-height: 100vh;
 }
 
 .container {
-    width: 100vh;
-    /*  min-width: 100%; */
-    margin: 0 auto;
+    /*   width: 100vh;
+    min-width: 1280px; */
+    /* margin: 0 auto;
+    display: flex; */
 
     .wrapper {
-        padding-left: 4.8rem;
-        padding-right: 0;
+        /*   padding: 0 48px; */
 
         .home {
-            display: flex;
+            /*   display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
-            width: 100%;
+            width: 100%; */
 
             p {
                 font-size: 0.75rem;
                 letter-spacing: 0.3rem;
                 text-transform: uppercase;
                 font-weight: 500;
+            }
 
-                h5 {
-                    margin-top: 26rem;
-                    font-size: 1.8rem;
-                    font-weight: 600;
-                    padding-right: 36rem;
-                }
+            h5 {
+                /*  margin-top: 260px; */
+                font-size: 24px;
+                font-weight: 300;
+                color: #1d1d1d;
+                /* padding-right: 360px; */
             }
         }
     }
 }
 
-//header
 header {
-    height: 10rem;
+    /*  height: 100px; */
 
     .inner-header {
         position: relative;
         z-index: 10;
-        height: 100%;
+        /* height: 100px; */
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        /*  align-items: center; */
+        /*  width: 100vh; */
+        padding: 2%;
 
         .logo a {
             font-weight: 700;
+            font-size: 1rem;
             text-decoration: none;
-            color: $black;
+            color: $secondary-menu-background-color;
+        }
+
+        .pineapple {
+            width: 5rem;
         }
 
         .menu {
@@ -78,51 +90,56 @@ header {
                 background: none;
                 outline: none;
                 cursor: pointer;
-                font-size: 0.8rem;
-                color: $black;
+                font-size: 1.5rem;
+                mix-blend-mode: difference;
             }
         }
     }
 
-    //hamburger menu or navigation
     .hamburger-menu {
         display: none;
         z-index: 9;
         top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        /*         left: 0;
+        right: 0; */
         position: fixed;
         height: 100%;
         width: 100%;
 
         .menu-secondary-background-color {
-            background-color: $black;
-            z-index: -1;
-            top: 0;
-            bottom: 0;
+            background: $secondary-menu-background-color;
+            /*     top: 0;
             left: 0;
             right: 0;
+            bottom: 0; */
             position: fixed;
             height: 100%;
             width: 100%;
+            z-index: -1;
         }
 
         .menu-layer {
             position: relative;
-            background-color: $red;
+            background: $main-menu-background-color;
             height: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
 
             .menu-city-background {
-                top: 0;
-                bottom: 0;
+                /* top: 0;
                 left: 0;
                 right: 0;
+                bottom: 0; */
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 opacity: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation-name: backgroundEffect;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
             }
 
             .wrapper {
@@ -133,24 +150,25 @@ header {
                     justify-content: space-between;
                     align-items: center;
                     position: relative;
-                    top: 20rem;
+                    margin-top: 10%;
+                    /*   top: 200px; */
 
                     nav {
                         display: block;
 
                         ul {
-                            padding: 0;
                             margin: 0;
+                            padding: 0;
 
                             li {
                                 list-style: none;
                                 font-size: 6rem;
                                 font-weight: 700;
                                 cursor: pointer;
-                                height: 13.5rem;
+                                height: 135px;
                                 overflow: hidden;
                                 position: relative;
-                                width: 70rem;
+                                width: 700px;
 
                                 a {
                                     position: absolute;
@@ -158,7 +176,7 @@ header {
                                     text-decoration: none;
 
                                     &:hover {
-                                        color: $black;
+                                        color: $secondary-menu-background-color;
                                     }
                                 }
                             }
@@ -167,11 +185,11 @@ header {
 
                     .info {
                         color: #fff;
-                        width: 30rem;
+                        width: 300px;
 
                         h3 {
                             font-size: 1.2rem;
-                            margin: 0.8rem auto;
+                            margin: 8px auto;
                         }
 
                         p {
@@ -183,31 +201,54 @@ header {
 
                 .locations {
                     position: absolute;
-                    bottom: 1rem;
+                    /*   bottom: -200; */
                     color: #fff;
-                    margin-top: 1.6rem;
+                    margin-top: 10%;
                     font-size: 0.8rem;
                     font-weight: 600;
 
                     span {
+                        cursor: pointer;
+
                         &:first-child {
-                            margin-left: 6.4rem;
+                            margin-left: 64px;
                         }
 
-                        cursor: pointer;
-                        margin-left: 0;
-                        margin-right: 3.2rem;
+                        font-weight: 400;
+                        margin: 0 32px;
                         transition: 0.3s ease-in-out;
 
                         &:hover {
-                            background-color: $black;
-                            padding-left: 0.8rem;
-                            padding-right: 2.4rem;
-                            border-radius: 0.4rem;
+                            color: #fff;
+                            background: $secondary-menu-background-color;
+                            padding: 8px 24px;
+                            border-radius: 4px;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes backgroundEffect {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 40% 10%;
+    }
+
+    50% {
+        background-position: 0 10%;
+    }
+
+    75% {
+        background-position: 10% 40%;
+    }
+
+    100% {
+        background-position: 0% 0%;
     }
 }
