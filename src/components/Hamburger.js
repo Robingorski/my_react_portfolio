@@ -81,7 +81,7 @@ const Hamburger = ({ state }) => {
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
                       to='/opportunities'>
-                      Opportunities
+                      Weather app
                     </Link>
                   </li>
                   <li>
