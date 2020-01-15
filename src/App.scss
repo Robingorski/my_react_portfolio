@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,800&display=swap");
 
 $main-menu-background-color: #6ff789;
 $secondary-menu-background-color: #000000;
@@ -85,9 +85,19 @@ header {
             color: $secondary-menu-background-color;
         }
 
+          
         .pineapple {
             width: 5rem;
-        }
+            transition: 0.4s ease-in-out;
+            
+            &:hover {
+            transition: 0.4s ease-in-out;
+            transform: rotate(30deg);
+        } 
+
+       
+
+    }
 
         .menu {
             button {
@@ -96,8 +106,9 @@ header {
                 outline: none;
                 cursor: pointer;
                 font-size: 1.5rem;
-                 font-weight: 600;
+                font-weight: 600;
                 mix-blend-mode: difference;
+                /* Behövs denna???? mix-blend-mode: difference; */
             }
         }
     }

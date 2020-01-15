@@ -4,8 +4,6 @@ import Hamburger from "./Hamburger";
 
 const logo = require('./../assets/pineapple.svg'); // with require
 
-//import { ReactComponent as Logo } from './../assets/pineapple.svg';
-
 const Header = ({ history }) => {
   // State of our Menu
   const [state, setState] = useState({

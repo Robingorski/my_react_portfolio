@@ -26,11 +26,17 @@ function App() {
 }
 
 function Opportunities() {
-  return <p>Discover our numerous opportunities</p>;
+  return (<p>Whats the weather like?</p>);
 }
 
 function about() {
-  return <p>Solutions that help you.</p>;
+  return (
+    <div className="about-me">
+      <div className="about-me-container">
+        <h4>Robin Gorski</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos enim odio architecto distinctio cupiditate accusamus magnam quos voluptatem. Rem, mollitia.</p>
+      </div>
+    </div>);
 }
 
 function Contact() {
@@ -42,7 +48,7 @@ function Home() {
     <div className='container'>
       <div className='wrapper'>
         <h5>
-        "Welcome to my portfolio"
+        "Portfolio"
         </h5>
       </div>
     </div>
