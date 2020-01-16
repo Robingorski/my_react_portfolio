@@ -85,19 +85,19 @@ header {
             color: $secondary-menu-background-color;
         }
 
-          
+
         .pineapple {
             width: 5rem;
             transition: 0.4s ease-in-out;
-            
+
             &:hover {
-            transition: 0.4s ease-in-out;
-            transform: rotate(30deg);
-        } 
+                transition: 0.4s ease-in-out;
+                transform: rotate(30deg);
+            }
 
-       
 
-    }
+
+        }
 
         .menu {
             button {
