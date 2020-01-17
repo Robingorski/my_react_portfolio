@@ -224,6 +224,9 @@ header {
                     margin-top: 0%;
                     font-size: 1rem;
                     font-weight: 600;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
 
                     span {
                         cursor: pointer;

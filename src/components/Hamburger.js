@@ -12,18 +12,20 @@ import {
   staggerRevealClose
 } from "./Animations";
 
-import dallas from "./images/dallas.webp";
+
 import austin from "./images/austin.webp";
 import newyork from "./images/newyork.webp";
-import sanfrancisco from "./images/sanfrancisco.webp";
-import beijing from "./images/beijing.webp";
+/* import sanfrancisco from "./images/sanfrancisco.webp"; */
+/* import beijing from "./images/dallas.webp"; */
+import quicksolution from "./images/quick-solution-pic.png";
+import underconstruction from "./images/under-construction.jpg";
 
 const cities = [
-  { name: "Dallas", image: dallas },
+  { name: "Quick Solution", image: quicksolution },
   { name: "Austin", image: austin },
+  { name: "Under Construction", image: underconstruction },
   { name: "New York", image: newyork },
-  { name: "San Francisco", image: sanfrancisco },
-  { name: "Beijing", image: beijing }
+/*   { name: "Beijing", image: beijing } */
 ];
 
 const Hamburger = ({ state }) => {
