@@ -53,7 +53,7 @@ export const fadeInUp = node => {
 // Hover on the link
 export const handleHover = e => {
   gsap.to(e.target, {
-    duration: 0.3,
+    duration: 0.4,
     y: 3,
     skewX: 4,
     ease: "power1.inOut"
@@ -63,7 +63,7 @@ export const handleHover = e => {
 // Hover off the link
 export const handleHoverExit = e => {
   gsap.to(e.target, {
-    duration: 0.3,
+    duration: 0.4,
     y: -3,
     skewX: 0,
     ease: "power1.inOut"
@@ -77,14 +77,14 @@ export const handleCity = (city, target) => {
     background: `url(${city}) center center`
   });
   gsap.to(target, {
-    duration: 0.4,
+    duration: 0.6,
     opacity: 1,
     ease: "power3.inOut"
   });
   gsap.from(target, {
-    duration: 0.4,
+    duration: 0.6,
     skewY: 2,
-    transformOrigin: "right top"
+    transformOrigin: "right top" 
   });
 };
 
