@@ -6,6 +6,8 @@ $secondary-menu-background-color: #000000;
 $main-menu-background-color: linear-gradient(45deg, rgba(67, 76, 252, 1) 0%, rgba(128, 98, 250, 1) 45%, rgba(255, 150, 240, 1) 100%);
 
 
+$breakpoint-tablet: 480px;
+
 * {
     margin: 0;
     padding: 0;
@@ -279,7 +281,14 @@ header {
 /* ----------- Small screen usage ends ------------ */
 /* ----------- Mobile usage ------------ */
 
-@media only screen and (max-width: 480px) {}
+@media (max-width: $breakpoint-tablet) {
+
+
+    .inner-header {
+        padding: 10%;
+
+    }
+}
 
 /* ----------- Mobile usage ENDS------------ */
 
