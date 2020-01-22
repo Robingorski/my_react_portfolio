@@ -36,7 +36,6 @@ const Hamburger = ({ state }) => {
   let cityBackground = useRef(null);
   let line1 = useRef(null);
   let line2 = useRef(null);
-  let line3 = useRef(null);
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
@@ -59,7 +58,7 @@ const Hamburger = ({ state }) => {
         height: "100%"
       });
       staggerReveal(reveal1, reveal2);
-      staggerText(line1, line2, line3);
+      staggerText(line1, line2);
     }
   }, [state]);
 
@@ -77,15 +76,15 @@ const Hamburger = ({ state }) => {
             <div className='menu-links'>
               <nav>
                 <ul>
-                  <li>
+                {  <li>
                     <Link
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       ref={el => (line1 = el)}
-                      to='/opportunities'>
+                      to='/weather-app'>
                       Weather app
                     </Link>
-                  </li>
+                  </li>}
                   <li>
                     <Link
                       onMouseEnter={e => handleHover(e)}
@@ -93,15 +92,6 @@ const Hamburger = ({ state }) => {
                       ref={el => (line2 = el)}
                       to='/about-me'>
                       About me
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line3 = el)}
-                      to='/contact-me'>
-                      Contact me
                     </Link>
                   </li>
                 </ul>

@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import selfie from "./components/images/selfie.jpg";
 
 function App() {
   return (
@@ -13,9 +14,8 @@ function App() {
             <div className='home'>
               <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/opportunities' component={Opportunities} />
+                <Route exact path='/weather-app' component={Weather} />
                 <Route exact path='/about-me' component={about} />
-                <Route exact path='/contact-me' component={Contact} />
               </Switch>
             </div>
           </div>
@@ -25,22 +25,20 @@ function App() {
   );
 }
 
-function Opportunities() {
+function Weather() {
   return (<p>Whats the weather like?</p>);
 }
+
+/* const selfie = require('./components/images/selfie.jpg'); */
+
 
 function about() {
   return (
     <div className="about-me">
-      <div className="about-me-container">
-        <h4>Robin Gorski</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos enim odio architecto distinctio cupiditate accusamus magnam quos voluptatem. Rem, mollitia.</p>
-      </div>
+      <img className="selfie-img" src={selfie} alt="selfie" />
+      <h4>Robin Gorski</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>);
-}
-
-function Contact() {
-  return <p>Feel free to reach me.</p>;
 }
 
 function Home() {
@@ -48,7 +46,7 @@ function Home() {
     <div className='container'>
       <div className='wrapper'>
         <h5>
-        "Portfolio"
+          "Portfolio"
         </h5>
       </div>
     </div>
