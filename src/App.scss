@@ -6,7 +6,7 @@ $secondary-menu-background-color: #000000;
 $main-menu-background-color: linear-gradient(45deg, rgba(67, 76, 252, 1) 0%, rgba(128, 98, 250, 1) 45%, rgba(255, 150, 240, 1) 100%);
 
 
-$breakpoint-tablet: 480px;
+$breakpoint-phone: 480px;
 
 * {
     margin: 0;
@@ -172,16 +172,20 @@ header {
                     /*   position: relative; */
 
                     .menu-links {
-                        display: flex;
+                        /*  display: flex; */
                         /*     justify-content: space-between;
                     align-items: center; */
-                        justify-content: center;
+                        /*  justify-content: center; */
                         position: relative;
                         margin-top: 10%;
                         width: 100%;
 
                         nav {
-                            display: block;
+                            /*  display: block; */
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
 
                             ul {
                                 margin-top: 10%;
@@ -195,7 +199,7 @@ header {
                                     height: 10rem;
                                     /*  overflow: hidden;
                                     position: relative; */
-                                    width: 60rem;
+                                    width: 34rem;
 
                                     a {
                                         position: absolute;
@@ -246,7 +250,7 @@ header {
                         }
 
                         font-weight: 400;
-                        margin: 0 32px;
+                        /*  margin: 0 32px; */
                         transition: 0.3s ease-in-out;
 
                         &:hover {
@@ -281,12 +285,51 @@ header {
 /* ----------- Small screen usage ends ------------ */
 /* ----------- Mobile usage ------------ */
 
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: $breakpoint-phone) {
 
+    header {
+        .inner-header {
+            padding: 10%;
 
-    .inner-header {
-        padding: 10%;
+        }
+    }
 
+    .container {
+
+        .wrapper {
+
+            .home {
+
+                p {}
+
+                h5 {
+                    height: 70vh;
+                }
+            }
+        }
+    }
+
+    header {
+        .hamburger-menu {
+            .menu-layer {
+                .container {
+                    .wrapper {
+                        .menu-links {
+                            nav {
+                                ul {
+                                    margin-top: 33%;
+
+                                    li {
+                                        width: 30rem;
+                                        font-size: 4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
