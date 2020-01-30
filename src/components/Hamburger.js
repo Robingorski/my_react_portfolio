@@ -11,9 +11,10 @@ import {
   handleCity,
   staggerRevealClose
 } from "./Animations";
+/* Här */
+/* Här */
 
-
-import austin from "./images/austin.webp";
+/* import austin from "./images/austin.webp"; */
 import newyork from "./images/newyork.webp";
 /* import sanfrancisco from "./images/sanfrancisco.webp"; */
 /* import beijing from "./images/dallas.webp"; */
@@ -22,9 +23,10 @@ import underconstruction from "./images/under-construction.jpg";
 
 const cities = [
   { name: "Quick Solution", image: quicksolution },
-  { name: "Austin", image: austin },
   { name: "Under Construction", image: underconstruction },
   { name: "New York", image: newyork },
+  /* { name: "Austin", image: austin }, */
+  /* här */
 /*   { name: "Beijing", image: beijing } */
 ];
 
@@ -36,6 +38,8 @@ const Hamburger = ({ state }) => {
   let cityBackground = useRef(null);
   let line1 = useRef(null);
   let line2 = useRef(null);
+
+/* Här */
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
@@ -70,6 +74,8 @@ const Hamburger = ({ state }) => {
       <div ref={el => (reveal2 = el)} className='menu-layer'>
         <div
           ref={el => (cityBackground = el)}
+          /* Här */
+          /* Här */
           className='menu-city-background'></div>
         <div className='container'>
           <div className='wrapper'>
@@ -107,6 +113,7 @@ const Hamburger = ({ state }) => {
                   onMouseOut={() => handleCityReturn(cityBackground)}>
                   {el.name}
                 </span>
+                /* Här */
               ))}
             </div>
           </div>
