@@ -70,6 +70,9 @@ export const handleHoverExit = e => {
   });
 };
 
+
+/* Här */
+
 // adds city image once you hover on
 export const handleCity = (city, target) => {
   gsap.to(target, {
@@ -87,6 +90,8 @@ export const handleCity = (city, target) => {
     transformOrigin: "right top" 
   });
 };
+
+/* Här */
 
 // Removes the city image once you hover off
 export const handleCityReturn = target => {
