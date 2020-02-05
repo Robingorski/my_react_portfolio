@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -12,14 +12,12 @@ function App() {
       <div className='App'>
         <Header />
         <div className='container'>
-          <div className='wrapper'>
-            <div className='home'>
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/weather-app' component={Weather} />
-                <Route exact path='/about-me' component={about} />
-              </Switch>
-            </div>
+          <div className='home'>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/weather-app' component={Weather} />
+              <Route exact path='/about-me' component={about} />
+            </Switch>
           </div>
         </div>
       </div>
@@ -37,21 +35,21 @@ const api = {
 
 function Weather() {
 
-  const [query,setQuery] = useState('');
-  const [weather,setWeather] = useState({});
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
 
   const search = evt => {
-    if ( evt.key === 'Enter') {
+    if (evt.key === 'Enter') {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-      .then(res => res.json())
-      .then(result => {
-        setQuery('');
-        setWeather(result);
-        console.log(result);
-      });
+        .then(res => res.json())
+        .then(result => {
+          setQuery('');
+          setWeather(result);
+          console.log(result);
+        });
     }
   }
- 
+
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -67,27 +65,27 @@ function Weather() {
   return (
     <div className="app">
       <main>
-      <div className="search-box">
-        <input type="text" className="search-bar" placeholder="Search..." onChange= {e => setQuery(e.target.value)} value={query} onKeyPress={search} />
+        <div className="search-box">
+          <input type="text" className="search-bar" placeholder="Search..." onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search} />
         </div>
         {(typeof weather.main != "undefined") ? (
-        <div>
-          <div className="location-box">
-            <div className="location">{weather.name}, {weather.sys.country}</div>
-            <div className="date">{dateBuilder(new Date())}</div>
-          </div>
-          <div className="weather-box">
-            <div className="temp">
-              {Math.round(weather.main.temp)}°c
+          <div>
+            <div className="location-box">
+              <div className="location">{weather.name}, {weather.sys.country}</div>
+              <div className="date">{dateBuilder(new Date())}</div>
             </div>
-            <div className="weather">{weather.weather[0].main}</div>
+            <div className="weather-box">
+              <div className="temp">
+                {Math.round(weather.main.temp)}°c
+            </div>
+              <div className="weather">{weather.weather[0].main}</div>
+            </div>
           </div>
-        </div>
         ) : ('')}
       </main>
     </div>
-   
-    );
+
+  );
 }
 
 /* Weather ends here */
@@ -128,11 +126,9 @@ function about() {
 function Home() {
   return (
     <div className='container'>
-      <div className='wrapper'>
-        <h5>
-          "Portfolio"
+      <h5>
+        "Portfolio"
         </h5>
-      </div>
     </div>
   );
 }

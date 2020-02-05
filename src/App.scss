@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,800&display=swap");
 
-/* $main-menu-background-color: #6ff789; */
 $secondary-menu-background-color: #000000;
 
 $main-menu-background-color: linear-gradient(45deg, rgba(67, 76, 252, 1) 0%, rgba(128, 98, 250, 1) 45%, rgba(255, 150, 240, 1) 100%);
@@ -20,67 +19,42 @@ html {
     scroll-behavior: smooth;
     max-width: 100vW;
     max-height: 100vh;
-    /*   background-color: $main-menu-background-color; */
-    /*  overflow-x: hidden; */
 }
 
 body {
-    /*  overflow-x: hidden; */
-    /*  max-width: 100vh; */
     max-height: 100vh;
 }
 
 .container {
-    /*   width: 100vh;
-    min-width: 1280px; */
-    /* margin: 0 auto;
-    display: flex; */
 
-    .wrapper {
-        /*   padding: 0 48px; */
+    .home {
 
-        .home {
-            /*   display: flex;
-            justify-content: center;
+        p {
+            font-size: 0.85rem;
+            letter-spacing: 0.04rem;
+            font-weight: 500;
+        }
+
+        h5 {
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: #1d1d1d;
+            height: 80vh;
+            display: flex;
             align-items: center;
-            height: 100%;
-            width: 100%; */
-
-            p {
-                font-size: 0.85rem;
-                letter-spacing: 0.04rem;
-                /*  text-transform: uppercase; */
-                font-weight: 500;
-                /* margin-top: 1%; */
-            }
-
-            h5 {
-                /*  margin-top: 260px; */
-                font-size: 2.4rem;
-                font-weight: 300;
-                color: #1d1d1d;
-                height: 80vh;
-                display: flex;
-                align-items: center;
-                /* text-align: center; */
-                justify-content: center;
-                /* padding-right: 360px; */
-            }
+            justify-content: center;
         }
     }
 }
 
 header {
-    /*  height: 100px; */
 
     .inner-header {
         position: relative;
         z-index: 10;
-        /* height: 100px; */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /*  width: 100vh; */
         padding: 2%;
 
         .logo a {
@@ -90,7 +64,6 @@ header {
             color: $secondary-menu-background-color;
         }
 
-
         .pineapple {
             width: 5rem;
             transition: 0.4s ease-in-out;
@@ -99,9 +72,6 @@ header {
                 transition: 0.4s ease-in-out;
                 transform: rotate(30deg);
             }
-
-
-
         }
 
         .menu {
@@ -112,9 +82,7 @@ header {
                 cursor: pointer;
                 font-size: 1.5rem;
                 font-weight: 600;
-                mix-blend-mode: difference;
                 text-transform: uppercase;
-                /* Behövs denna???? mix-blend-mode: difference; */
             }
         }
     }
@@ -123,18 +91,12 @@ header {
         display: none;
         z-index: 9;
         top: 0;
-        /*         left: 0;
-        right: 0; */
         position: fixed;
         height: 100%;
         width: 100%;
 
         .menu-secondary-background-color {
             background: $secondary-menu-background-color;
-            /*     top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0; */
             position: fixed;
             height: 100%;
             width: 100%;
@@ -150,10 +112,6 @@ header {
             justify-content: center;
 
             .menu-city-background {
-                /* top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0; */
                 position: absolute;
                 height: 100%;
                 width: 100%;
@@ -168,49 +126,35 @@ header {
             .container {
                 width: 100vw;
 
+                .menu-links {
+                    position: relative;
+                    margin-top: 10%;
+                    width: 100%;
 
-                .wrapper {
-                    /*   position: relative; */
+                    nav {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-left: 15%;
 
-                    .menu-links {
-                        /*  display: flex; */
-                        /*     justify-content: space-between;
-                    align-items: center; */
-                        /*  justify-content: center; */
-                        position: relative;
-                        margin-top: 10%;
-                        width: 100%;
+                        ul {
+                            margin-top: 10%;
 
-                        nav {
-                            /*  display: block; */
+                            li {
+                                list-style: none;
+                                font-size: 6rem;
+                                font-weight: 700;
+                                cursor: pointer;
+                                height: 10rem;
+                                width: 34rem;
 
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: center;
-                            margin-left: 15%;
+                                a {
+                                    position: absolute;
+                                    color: #fff;
+                                    text-decoration: none;
 
-                            ul {
-                                margin-top: 10%;
-
-
-                                li {
-                                    list-style: none;
-                                    font-size: 6rem;
-                                    font-weight: 700;
-                                    cursor: pointer;
-                                    height: 10rem;
-                                    /*  overflow: hidden;
-                                    position: relative; */
-                                    width: 34rem;
-
-                                    a {
-                                        position: absolute;
-                                        color: #fff;
-                                        text-decoration: none;
-
-                                        &:hover {
-                                            color: $secondary-menu-background-color;
-                                        }
+                                    &:hover {
+                                        color: $secondary-menu-background-color;
                                     }
                                 }
                             }
@@ -235,7 +179,6 @@ header {
 
                 .projects {
                     position: absolute;
-                    /*   bottom: -200; */
                     color: #fff;
                     margin-top: 5%;
                     font-size: 1rem;
@@ -246,14 +189,12 @@ header {
 
                     span {
                         cursor: pointer;
+                        font-weight: 400;
+                        transition: 0.4s ease-in-out;
 
                         &:first-child {
                             margin-left: 4%;
                         }
-
-                        font-weight: 400;
-                        /*  margin: 0 32px; */
-                        transition: 0.3s ease-in-out;
 
                         &:hover {
                             color: #fff;
@@ -273,7 +214,6 @@ header {
 .about-me {
     display: flex;
     justify-content: center;
-    /*  align-items: center; */
     margin-top: 7%;
     flex-wrap: wrap;
 
@@ -284,11 +224,6 @@ header {
     .about-me-text_container {
         margin-left: 2%;
         width: 40rem;
-        /*    display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: start;
-        flex-direction: column; */
     }
 
     h4 {
@@ -302,7 +237,6 @@ header {
 
     .about-me-text_contact {
         margin-top: 3%;
-
 
         a {
             color: #434cfc;
@@ -331,6 +265,10 @@ header {
     }
 }
 
+::placeholder {
+    color: #f8f8f8;
+}
+
 .search-box .search-bar {
     display: block;
     width: 20rem;
@@ -341,7 +279,6 @@ header {
     background-color: rgba($color: #000000, $alpha: .4);
     border-radius: 3rem;
     box-shadow: 0rem 0.5rem rgba($color: #000000, $alpha: 0.2);
-
     color: #313131;
     font-size: 2rem;
     transition: 0.4s ease;
@@ -362,7 +299,8 @@ header {
         text-align: center;
         text-shadow: 0.3rem 0.3rem rgba($color: #202020, $alpha: 0.5);
     }
-    .date{
+
+    .date {
         color: #FFF;
         font-size: 2.2rem;
         font-weight: 400;
@@ -383,8 +321,8 @@ header {
         color: #FFF;
         font-weight: 900;
         text-shadow: 0.3rem 0.3rem rgba($color: #202020, $alpha: 0.5);
-
     }
+
     .weather {
         font-size: 7rem;
         color: #FFF;
@@ -393,18 +331,7 @@ header {
     }
 }
 
-
-
-
 /* WEATHER APP ENDS */
-
-
-
-/* ----------- Small screen usage ------------ */
-
-@media only screen and (max-width:1300px) {}
-
-/* ----------- Small screen usage ends ------------ */
 /* ----------- Mobile usage ------------ */
 
 @media (max-width: $breakpoint-phone) {
@@ -412,21 +339,15 @@ header {
     header {
         .inner-header {
             padding: 10%;
-
         }
     }
 
     .container {
+        .home {
+            p {}
 
-        .wrapper {
-
-            .home {
-
-                p {}
-
-                h5 {
-                    height: 70vh;
-                }
+            h5 {
+                height: 70vh;
             }
         }
     }
@@ -435,16 +356,14 @@ header {
         .hamburger-menu {
             .menu-layer {
                 .container {
-                    .wrapper {
-                        .menu-links {
-                            nav {
-                                ul {
-                                    margin-top: 33%;
+                    .menu-links {
+                        nav {
+                            ul {
+                                margin-top: 33%;
 
-                                    li {
-                                        width: 30rem;
-                                        font-size: 4rem;
-                                    }
+                                li {
+                                    width: 30rem;
+                                    font-size: 4rem;
                                 }
                             }
                         }
@@ -455,9 +374,6 @@ header {
     }
 
     .about-me {
-        /*  margin-bottom: 35%; */
-
-
         .selfie-img {
             height: 37.5rem;
         }
@@ -465,7 +381,6 @@ header {
         .about-me-text_container {
             margin-left: 10%;
             margin-right: 10%;
-
         }
 
         h4 {}
@@ -475,40 +390,34 @@ header {
         .about-me-text_contact {
             margin-bottom: 20%;
 
-
-
             a {}
         }
     }
-
-
 }
 
 /* ----------- Mobile usage ENDS------------ */
-
-
-
-
-
+/* Animation for the project showcase */
 
 @keyframes backgroundEffect {
     0% {
-        background-position: 0% 0%;
+        background-position: 50% 50%;
     }
 
     25% {
-        background-position: 40% 10%;
+        background-position: 75% 10%;
     }
 
     50% {
-        background-position: 0 10%;
+        background-position: 0% 0%;
     }
 
     75% {
-        background-position: 10% 40%;
+        background-position: 10% 75%;
     }
 
     100% {
-        background-position: 0% 0%;
+        background-position: 50% 50%;
     }
 }
+
+/* Animation for the project showcase ENDS */

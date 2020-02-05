@@ -55,7 +55,6 @@ const Header = ({ history }) => {
   return (
     <header>
       <div className="container">
-        <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
               <Link to="/">
@@ -68,7 +67,6 @@ const Header = ({ history }) => {
               </button>
             </div>
           </div>
-        </div>
       </div>
       <Hamburger state={state} />
     </header >
