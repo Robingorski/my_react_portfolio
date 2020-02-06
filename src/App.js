@@ -102,7 +102,7 @@ function about() {
         </div>
         <div>
           <p>
-            I am currently studying Front End Development at KYH in Stockholm, Sweden.
+            I am currently studying Front End Development in Stockholm, Sweden.
             </p>
           <p>Where i enjoy develop clean and smart solutions for the web. </p>
         </div>

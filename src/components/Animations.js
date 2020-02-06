@@ -27,8 +27,8 @@ export const staggerRevealClose = (node1, node2) => {
 };
 
 // STAGGER THE LINKS TO APPEAR
-export const staggerText = (node1, node2, node3) => {
-  gsap.from([node1, node2, node3], {
+export const staggerText = (node1, node2) => {
+  gsap.from([node1, node2], {
     duration: 0.8,
     y: 100,
     delay: 0.1,
@@ -70,14 +70,11 @@ export const handleHoverExit = e => {
   });
 };
 
-
-/* Här */
-
-// adds city image once you hover on
-export const handleCity = (city, target) => {
+// adds project image once you hover over the name.
+export const handleProject = (project, target) => {
   gsap.to(target, {
     duration: 0,
-    background: `url(${city}) center center`
+    background: `url(${project}) center center`
   });
   gsap.to(target, {
     duration: 0.6,
@@ -91,10 +88,8 @@ export const handleCity = (city, target) => {
   });
 };
 
-/* Här */
-
-// Removes the city image once you hover off
-export const handleCityReturn = target => {
+// Removes the project image once you stop hover.
+export const handleProjectReturn = target => {
   gsap.to(target, {
     duration: 0,
     skewY: 0

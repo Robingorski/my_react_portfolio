@@ -1,33 +1,25 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
-
 import {
   staggerText,
   staggerReveal,
   handleHover,
   handleHoverExit,
-  handleCityReturn,
-  handleCity,
+  handleProjectReturn,
+  handleProject,
   staggerRevealClose
 } from "./Animations";
-/* Här */
-/* Här */
 
-/* import austin from "./images/austin.webp"; */
-import newyork from "./images/newyork.webp";
-/* import sanfrancisco from "./images/sanfrancisco.webp"; */
-/* import beijing from "./images/dallas.webp"; */
+/* import newyork from "./images/newyork.webp"; */
 import quicksolution from "./images/quick-solution-pic.png";
 import underconstruction from "./images/under-construction.jpg";
+import quirepic from "./images/quire-pic.png";
 
-const cities = [
+const projects = [
   { name: "Quick Solution", image: quicksolution },
+  { name: "Qurie", image: quirepic },
   { name: "Under Construction", image: underconstruction },
-  { name: "New York", image: newyork },
-  /* { name: "Austin", image: austin }, */
-  /* här */
-/*   { name: "Beijing", image: beijing } */
 ];
 
 const Hamburger = ({ state }) => {
@@ -35,11 +27,9 @@ const Hamburger = ({ state }) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
-  let cityBackground = useRef(null);
+  let projectBackground = useRef(null);
   let line1 = useRef(null);
   let line2 = useRef(null);
-
-/* Här */
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
@@ -73,10 +63,8 @@ const Hamburger = ({ state }) => {
         className='menu-secondary-background-color'></div>
       <div ref={el => (reveal2 = el)} className='menu-layer'>
         <div
-          ref={el => (cityBackground = el)}
-          /* Här */
-          /* Här */
-          className='menu-city-background'></div>
+          ref={el => (projectBackground = el)}
+          className='menu-project-background'></div>
         <div className='container'>
           <div className='wrapper'>
             <div className='menu-links'>
@@ -106,15 +94,13 @@ const Hamburger = ({ state }) => {
             <div className='projects'>
               Projects:
                 {/* Returning the list of projects */}
-              {cities.map(el => (
+              {projects.map(el => (
                 <span
                   key={el.name}
-                  onMouseEnter={() => handleCity(el.image, cityBackground)}
-                  onMouseOut={() => handleCityReturn(cityBackground)}>
+                  onMouseEnter={() => handleProject(el.image, projectBackground)}
+                  onMouseOut={() => handleProjectReturn(projectBackground)}>
                   {el.name}
                 </span>
-                /* Här */
-                /* Här */
               ))}
             </div>
           </div>
