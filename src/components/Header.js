@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
-import Hamburger from "./Hamburger";
+import Menu from "./Menu";
 
 const logo = require('./../assets/pineapple.svg'); // with require
 
@@ -68,7 +68,7 @@ const Header = ({ history }) => {
             </div>
           </div>
       </div>
-      <Hamburger state={state} />
+      <Menu state={state} />
     </header >
   );
 };

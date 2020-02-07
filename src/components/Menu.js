@@ -22,7 +22,7 @@ const projects = [
   { name: "Under Construction", image: underconstruction },
 ];
 
-const Hamburger = ({ state }) => {
+const Menu = ({ state }) => {
   // Create varibles of our dom nodes
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
@@ -110,4 +110,4 @@ const Hamburger = ({ state }) => {
   );
 };
 
-export default Hamburger;
+export default Menu;
