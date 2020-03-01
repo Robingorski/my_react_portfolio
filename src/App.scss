@@ -30,7 +30,7 @@ body {
     .home {
 
         p {
-            font-size: 0.85rem;
+            font-size: 1rem;
             letter-spacing: 0.04rem;
             font-weight: 500;
         }
@@ -39,7 +39,7 @@ body {
             font-size: 2.4rem;
             font-weight: 300;
             color: #1d1d1d;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -241,97 +241,13 @@ header {
         a {
             color: #434cfc;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 1rem;
             letter-spacing: 0.04rem;
             font-weight: 500;
         }
     }
 }
-
 /* ABOUT ME ENDS */
-
-/* WEATHER APP STARTS */
-
-.app {
-    background-color: rgb(199, 199, 199);
-    background-size: cover;
-    background-position: bottom;
-    height: 87.5vh;
-
-    .search-box {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-::placeholder {
-    color: #f8f8f8;
-}
-
-.search-box .search-bar {
-    display: block;
-    width: 20rem;
-    padding: 1.5rem;
-    background: none;
-    border: none;
-    outline: none;
-    background-color: rgba($color: #000000, $alpha: .4);
-    border-radius: 3rem;
-    box-shadow: 0rem 0.5rem rgba($color: #000000, $alpha: 0.2);
-    color: #313131;
-    font-size: 2rem;
-    transition: 0.4s ease;
-    margin-top: 3%;
-}
-
-.location-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 5%;
-
-    .location {
-        color: #FFF;
-        font-size: 3.2rem;
-        font-weight: 500;
-        text-align: center;
-        text-shadow: 0.3rem 0.3rem rgba($color: #202020, $alpha: 0.5);
-    }
-
-    .date {
-        color: #FFF;
-        font-size: 2.2rem;
-        font-weight: 400;
-        text-align: center;
-        text-shadow: 0.3rem 0.3rem rgba($color: #202020, $alpha: 0.5);
-
-    }
-}
-
-.weather-box {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-    .temp {
-        font-size: 10rem;
-        color: #FFF;
-        font-weight: 900;
-        text-shadow: 0.3rem 0.3rem rgba($color: #202020, $alpha: 0.5);
-    }
-
-    .weather {
-        font-size: 7rem;
-        color: #FFF;
-        font-weight: 600;
-        text-shadow: 0.3rem 0.3rem rgba($color: #202020, $alpha: 0.5);
-    }
-}
-
-/* WEATHER APP ENDS */
 /* ----------- Mobile usage ------------ */
 
 @media (max-width: $breakpoint-phone) {
@@ -347,7 +263,7 @@ header {
             p {}
 
             h5 {
-                height: 70vh;
+                height: 60vh;
             }
         }
     }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Menu from "./Menu";
 
-const logo = require('./../assets/pineapple.svg'); // with require
+const logo = require('./../assets/pineapple.svg');
 
 const Header = ({ history }) => {
   // State of our Menu

@@ -29,7 +29,6 @@ const Menu = ({ state }) => {
   let reveal2 = useRef(null);
   let projectBackground = useRef(null);
   let line1 = useRef(null);
-  let line2 = useRef(null);
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
@@ -52,7 +51,7 @@ const Menu = ({ state }) => {
         height: "100%"
       });
       staggerReveal(reveal1, reveal2);
-      staggerText(line1, line2);
+      staggerText(line1);
     }
   }, [state]);
 
@@ -70,20 +69,11 @@ const Menu = ({ state }) => {
             <div className='menu-links'>
               <nav>
                 <ul>
-                {  <li>
-                    <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line1 = el)}
-                      to='/weather-app'>
-                      Weather app
-                    </Link>
-                  </li>}
                   <li>
                     <Link
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line2 = el)}
+                      ref={el => (line1 = el)}
                       to='/about-me'>
                       About me
                     </Link>
