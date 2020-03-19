@@ -37,7 +37,7 @@ function about() {
           <p>
             I am currently studying Front End Development in Stockholm, Sweden.
             </p>
-          <p>Where i enjoy develop clean designs and smart solutions for the web. </p>
+          <p>Where I enjoy develop clean designs and smart solutions for the web. </p>
         </div>
         <div className="about-me-text_skills">
           <p>Soft skills - Team Work, Communication, Leadership.</p>
