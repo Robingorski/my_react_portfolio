@@ -11,8 +11,7 @@ import {
   staggerRevealClose
 } from "./Animations";
 
-/* import newyork from "./images/newyork.webp"; */
-import quicksolution from "./images/quick-solution-pic.png";
+import quicksolution from "./images/quick-solution-pic.jpg";
 import underconstruction from "./images/under-construction.jpg";
 import quirepic from "./images/quire-pic.png";
 
