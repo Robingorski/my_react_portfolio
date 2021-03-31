@@ -18,7 +18,7 @@ import quirepic from "./images/quire-pic.png";
 const projects = [
   { name: "Quick Solution", image: quicksolution },
   { name: "Qurie", image: quirepic },
-  { name: "Under Construction", image: underconstruction },
+  { name: "Portfolio 2.0", image: underconstruction },
 ];
 
 const Menu = ({ state }) => {
